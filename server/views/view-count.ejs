@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Page View Counts</title>
+  </head>
+  <body>
+    <h1>All Page View Counts</h1>
+    <ul>
+      <% pageViews.forEach((pageView) => { %>
+      <li>
+        Route: <%= pageView.page_url %><br />
+        View Count: <%= pageView.view_count %>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

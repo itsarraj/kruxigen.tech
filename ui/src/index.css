@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'App Font';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/proza.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Footer Font';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/wellfleet.otf') format('woff');
+}
+
+@font-face {
+  font-family: 'Navbar Font';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/wellfleet.otf') format('woff');
+}
+
+body {
+  margin: 0;
+  font-family: 'App Font', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'App Font', source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+}

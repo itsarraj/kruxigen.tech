@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    // "strict": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true
+
+    "strict": false, // Disable strict mode
+    "noUnusedLocals": false, // Disable unused locals warning
+    "noUnusedParameters": false, // Disable unused parameters warning
+    "noFallthroughCasesInSwitch": false // Disable fallthrough cases warning
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+
+// {
+//   "compilerOptions": {
+//     "noEmit": false,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": false,
+//     "strict": false,
+//     "suppressImplicitAnyIndexErrors": true,
+//     "noImplicitAny": false,
+//     "noImplicitThis": false,
+//     "noImplicitReturns": false,
+//     "noFallthroughCasesInSwitch": false,
+//     "allowJs": true,
+//     "checkJs": false
+//   }
+// }

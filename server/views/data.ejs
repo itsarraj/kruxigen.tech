@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Page</title>
+    <style>
+      li {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Data Page</h1>
+    <ul>
+      <% data.forEach((item) => { %>
+      <li>
+        <strong>Name:</strong> <%= item.name %><br />
+        <strong>Email:</strong> <%= item.email %><br />
+        <strong>Message:</strong> <%= item.message %><br />
+        <strong>Created At:</strong> <%= new Date(item.createdAt).toString()
+        %><br />
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
