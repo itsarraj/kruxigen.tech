@@ -1,0 +1,4 @@
+rules:
+  - id: sql-injection
+  - id: xss
+  - id: insecure-password-storage
