@@ -1,3 +1,5 @@
 rules:
   - id: sql-injection
+    message: "Possible SQL injection vulnerability detected."
+    # other properties for the rule, such as `pattern`, `severity`, etc.
 
