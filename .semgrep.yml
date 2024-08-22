@@ -4,3 +4,4 @@ rules:
   - id: insecure-password-storage
     message: "Avoid storing passwords in plain text."
     languages: [all, typescript, javascript]  
+    severity: ERROR  
