@@ -1,5 +1,5 @@
 rules:
   - id: sql-injection
-    message: "Possible SQL injection vulnerability detected."
-    # other properties for the rule, such as `pattern`, `severity`, etc.
-
+    message: Pervasives is deprecated and not available after 4.10. Use Stdlib.
+    languages: [ocaml]
+    severity: ERROR
