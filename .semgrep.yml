@@ -1,5 +1,9 @@
 rules:
-  - id: sql-injection
-    message: Pervasives is deprecated and not available after 4.10. Use Stdlib.
-    languages: [ocaml]
-    severity: ERROR
+  - id: express-pg-sqli
+    message: |-
+      Insufficient permissions to view rule definition.
+      This rule is only visible to logged in users. Log in to see this rule.
+    severity: WARNING
+    languages:
+      - javascript
+      - typescript
