@@ -1,34 +1,24 @@
-name: Semgrep Analysis
+rules:
+  - id: no-eval
+    patterns:
+      - pattern: eval($X)
+    message: Avoid using `eval` as it can lead to security vulnerabilities.
+    severity: ERROR
+    languages: [javascript, python]
+    metadata:
+      category: security
+      owasp: A1: Injection
+    paths:
+      include: ["src/**/*.js", "src/**/*.py"]
+      exclude: ["tests/"]
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-
-jobs:
-  semgrep:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-
-    - name: Install Semgrep
-      run: |
-        python -m pip install semgrep
-
-    - name: Run Semgrep
-      run: |
-        semgrep --config=p/owasp-top-ten --output=semgrep-results.json
-
-    - name: Upload Semgrep results
-      uses: actions/upload-artifact@v3
-      with:
-        name: semgrep-results
-        path: semgrep-results.json
+  - id: no-console-log
+    patterns:
+      - pattern: console.log($X)
+    message: Remove `console.log` statements before committing code.
+    severity: WARNING
+    languages: [javascript]
+    paths:
+      include: ["src/**/*.js"]
+      exclude: ["src/vendor/"]
+name: Semgrep Analysis on: push: branches: - main pull_request: jobs: semgrep: runs-on: ubuntu-latest steps: - name: Checkout code uses: actions/checkout@v3 - name: Set up Python uses: actions/setup-python@v4 with: python-version: '3.x' - name: Install Semgrep run: | python -m pip install semgrep - name: Run Semgrep run: | semgrep --config=p/owasp-top-ten --output=semgrep-results.json - name: Upload Semgrep results uses: actions/upload-artifact@v3 with: name: semgrep-results path: semgrep-results.json
