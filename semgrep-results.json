@@ -1,0 +1,17 @@
+                  
+                  
+┌────────────────┐
+│ 1 Code Finding │
+└────────────────┘
+                                          
+  [36m[22m[24m  server/routes/routes.ts[0m
+   ❯❯❱ [1mjavascript.express.security.injection.tainted-sql-string.tainted-sql-string[0m
+          Detected user input used to manually construct a SQL string. This is usually bad practice  
+          because manual construction could accidentally result in a SQL injection. An attacker could
+          use a SQL injection to steal or modify contents of the database. Instead, use a            
+          parameterized query which is available by default in most database engines. Alternatively, 
+          consider using an object-relational mapper (ORM) such as Sequelize which will protect your 
+          queries.                                                                                   
+          Details: https://sg.run/66ZL                                                               
+                                                                                                     
+           76┆ console.log(`Received Create or Update request for ${page_url}`);
